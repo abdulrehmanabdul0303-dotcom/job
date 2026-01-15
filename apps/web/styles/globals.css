@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 226 75% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 30% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 220 22% 94%;
+    --muted-foreground: 218 15% 45%;
+    --accent: 262 83% 64%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 26% 90%;
+    --input: 220 26% 90%;
+    --ring: 226 75% 60%;
+    --radius: 0.9rem;
+    --elevated: 222 100% 97%;
+    --soft-border: 215 25% 86%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 16%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 14%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 226 85% 68%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 220 28% 22%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 26% 20%;
+    --muted-foreground: 216 18% 72%;
+    --accent: 262 88% 71%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 70% 58%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 28% 28%;
+    --input: 220 28% 28%;
+    --ring: 226 85% 68%;
+    --elevated: 222 47% 18%;
+    --soft-border: 216 30% 32%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background;
+}
+
+.animate-in {
+  animation: fade-in 0.2s ease-out;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
